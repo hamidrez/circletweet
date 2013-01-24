@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "SHSidebarController.h"
-#import "BlueVC.h"
-#import "RedVC.h"
+#import "HomeVC.h"
+#import "MainVC.h"
+#import "SettingsVC.h"
 
 @implementation AppDelegate
 
@@ -24,36 +25,32 @@
     
     NSMutableArray *vcs = [NSMutableArray array];
     
-    //6 views
-    for (int i = 1; i <= 6; i++){
-        
-        //Check if index is pair
-        if (i % 2 == 0){
-            
-            //Creating view
-            BlueVC *blue = [[BlueVC alloc] init];
-            
-            //Navigation Controller is required
-            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:blue];
-            
-            //Dictionary of the view and title
-            NSDictionary *view = [NSDictionary dictionaryWithObjectsAndKeys:nav, @"vc", [NSString stringWithFormat:@"Blue %i", i], @"title", nil];
-            
-            //And we finally add it to the array
-            [vcs addObject:view];
-        }
-        
-        else {
-            
-            RedVC *red = [[RedVC alloc] init];
-            
-            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:red];
-            
-            NSDictionary *view = [NSDictionary dictionaryWithObjectsAndKeys:nav, @"vc", [NSString stringWithFormat:@"Red %i", i], @"title", nil];
-            [vcs addObject:view];
-            
-        }
-    }
+    // 1st View is the home view where users can see the tweets around them based on the settings
+    
+    //Creating view
+    
+    //Navigation Controller is required
+    MainVC *vc = [[MainVC alloc] initWithStyle:UITableViewStylePlain];
+    
+    UINavigationController *navHome = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    //Dictionary of the view and title
+    NSDictionary *homeView = [NSDictionary dictionaryWithObjectsAndKeys:navHome, @"vc", [NSString stringWithFormat:@"Home"], @"title", nil];
+    
+    //And we finally add it to the array
+    [vcs addObject:homeView];
+    
+    //Seond item and view is the settings view
+    
+    SettingsVC *settings = [[SettingsVC alloc] init];
+    
+    UINavigationController *settingsNav = [[UINavigationController alloc] initWithRootViewController:settings];
+    
+    NSDictionary *settingsView = [NSDictionary dictionaryWithObjectsAndKeys:settingsNav, @"vc", [NSString stringWithFormat:@"Settings"], @"title", nil];
+    [vcs addObject:settingsView];
+    
+    
+    
     
     //Create controller and set views
     SHSidebarController *sidebar = [[SHSidebarController alloc] initWithArrayOfVC:vcs];
