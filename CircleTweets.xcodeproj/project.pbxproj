@@ -19,7 +19,6 @@
 		E8545A7316B0F24C00AC5EA5 /* Lil_Birds.png in Resources */ = {isa = PBXBuildFile; fileRef = E8545A7216B0F24C00AC5EA5 /* Lil_Birds.png */; };
 		E8545A7516B0F26800AC5EA5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8545A7416B0F26800AC5EA5 /* Default-568h@2x.png */; };
 		E8545A7716B0F2DF00AC5EA5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E8545A7616B0F2DF00AC5EA5 /* icon.png */; };
-		E8545A7B16B0F35100AC5EA5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E8545A7A16B0F35100AC5EA5 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		E8545A7216B0F24C00AC5EA5 /* Lil_Birds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lil_Birds.png; sourceTree = "<group>"; };
 		E8545A7416B0F26800AC5EA5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		E8545A7616B0F2DF00AC5EA5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		E8545A7A16B0F35100AC5EA5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 		E8545A4316B0F0E400AC5EA5 = {
 			isa = PBXGroup;
 			children = (
-				E8545A7A16B0F35100AC5EA5 /* icon.png */,
 				E8545A5816B0F0E400AC5EA5 /* CircleTweets */,
 				E8545A5116B0F0E400AC5EA5 /* Frameworks */,
 				E8545A4F16B0F0E400AC5EA5 /* Products */,
@@ -193,7 +190,6 @@
 				E8545A7316B0F24C00AC5EA5 /* Lil_Birds.png in Resources */,
 				E8545A7516B0F26800AC5EA5 /* Default-568h@2x.png in Resources */,
 				E8545A7716B0F2DF00AC5EA5 /* icon.png in Resources */,
-				E8545A7B16B0F35100AC5EA5 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +310,7 @@
 				E8545A6E16B0F0E500AC5EA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
