@@ -30,7 +30,7 @@
     self.navigationItem.rightBarButtonItem = refreshButton;
 
     self.title = @"Tweets Around Me!";
-    self.tableView.rowHeight = 150;
+    self.tableView.rowHeight = 200;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
     
     ODRefreshControl *refreshControl = [[ODRefreshControl alloc] initInScrollView:self.tableView];

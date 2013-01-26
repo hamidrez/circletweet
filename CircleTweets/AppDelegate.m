@@ -10,7 +10,8 @@
 #import "SHSidebarController.h"
 #import "HomeVC.h"
 #import "MainVC.h"
-#import "SettingsVC.h"
+#import "ChatVC.h"
+#import "ChatClientViewController.h"
 
 @implementation AppDelegate
 
@@ -25,66 +26,31 @@
     
     NSMutableArray *vcs = [NSMutableArray array];
     
-    // 1st View is the home view where users can see the tweets around them based on the settings
-    
-    //Creating view
-    
-    //Navigation Controller is required
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     MainVC *vc = [[MainVC alloc] initWithStyle:UITableViewStylePlain];
-    
     UINavigationController *navHome = [[UINavigationController alloc] initWithRootViewController:vc];
-    
-    //Dictionary of the view and title
     NSDictionary *homeView = [NSDictionary dictionaryWithObjectsAndKeys:navHome, @"vc", [NSString stringWithFormat:@"Home"], @"title", nil];
-    
-    //And we finally add it to the array
     [vcs addObject:homeView];
-    
-    //Seond item and view is the settings view
-    
-    SettingsVC *settings = [[SettingsVC alloc] init];
-    
-    UINavigationController *settingsNav = [[UINavigationController alloc] initWithRootViewController:settings];
-    
-    NSDictionary *settingsView = [NSDictionary dictionaryWithObjectsAndKeys:settingsNav, @"vc", [NSString stringWithFormat:@"Settings"], @"title", nil];
-    [vcs addObject:settingsView];
-    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ChatClientViewController *chat = [[ChatClientViewController alloc] init];
+    UINavigationController *chatNav = [[UINavigationController alloc] initWithRootViewController:chat];
+    NSDictionary *chatView = [NSDictionary dictionaryWithObjectsAndKeys:chatNav, @"vc", [NSString stringWithFormat:@"Settings"], @"title", nil];
+    [vcs addObject:chatView];
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     
-    
-    //Create controller and set views
+    /*
+     * Add te views to the sidebar menu
+     */
     SHSidebarController *sidebar = [[SHSidebarController alloc] initWithArrayOfVC:vcs];
     self.window.rootViewController = sidebar;
     
     [self.window makeKeyAndVisible];
     return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end
