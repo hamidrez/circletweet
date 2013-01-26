@@ -34,7 +34,7 @@
 	
 	CFReadStreamRef readStream;
 	CFWriteStreamRef writeStream;
-	CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"localhost", 80, &readStream, &writeStream);
+	CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"192.168.1.68", 96, &readStream, &writeStream);
 	
 	inputStream = (NSInputStream *)readStream;
 	outputStream = (NSOutputStream *)writeStream;
@@ -44,13 +44,14 @@
 	[outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 	[inputStream open];
 	[outputStream open];
+    [self joinChat];
 	
 }
 
 - (IBAction) joinChat {
 
 	[self.view bringSubviewToFront:chatView];
-	NSString *response  = [NSString stringWithFormat:@"iam:%@", inputNameField.text];
+	NSString *response  = [NSString stringWithFormat:@"iam:%@", @"Hamid"];
 	NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSASCIIStringEncoding]];
 	[outputStream write:[data bytes] maxLength:[data length]];
 	

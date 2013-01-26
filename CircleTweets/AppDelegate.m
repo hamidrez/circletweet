@@ -10,8 +10,9 @@
 #import "SHSidebarController.h"
 #import "HomeVC.h"
 #import "MainVC.h"
-#import "ChatVC.h"
+#import "BBViewController.h"
 #import "ChatClientViewController.h"
+#import "ChatMain.h"
 
 @implementation AppDelegate
 
@@ -30,18 +31,32 @@
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     MainVC *vc = [[MainVC alloc] initWithStyle:UITableViewStylePlain];
+    
     UINavigationController *navHome = [[UINavigationController alloc] initWithRootViewController:vc];
     NSDictionary *homeView = [NSDictionary dictionaryWithObjectsAndKeys:navHome, @"vc", [NSString stringWithFormat:@"Home"], @"title", nil];
     [vcs addObject:homeView];
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ChatClientViewController *chat = [[ChatClientViewController alloc] init];
+    ChatMain *chat = [[ChatMain alloc] init];
     UINavigationController *chatNav = [[UINavigationController alloc] initWithRootViewController:chat];
-    NSDictionary *chatView = [NSDictionary dictionaryWithObjectsAndKeys:chatNav, @"vc", [NSString stringWithFormat:@"Settings"], @"title", nil];
+    NSDictionary *chatView = [NSDictionary dictionaryWithObjectsAndKeys:chatNav, @"vc", [NSString stringWithFormat:@"Chat"], @"title", nil];
     [vcs addObject:chatView];
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        BBViewController *friends = [[BBViewController alloc] initWithNibName:@"BBViewController_iPhone" bundle:nil];
+    //} else {
+        //BBViewController *friends = [[BBViewController alloc] initWithNibName:@"BBViewController_iPad" bundle:nil];
+    //}
+    UINavigationController *friendsNav = [[UINavigationController alloc] initWithRootViewController:friends];
+    NSDictionary *friendsView = [NSDictionary dictionaryWithObjectsAndKeys:friendsNav, @"vc", [NSString stringWithFormat:@"Settings"], @"title", nil];
+    [vcs addObject:friendsView];
     
+    
+    
+    
+    
+   
     
     /*
      * Add te views to the sidebar menu
@@ -51,6 +66,13 @@
     
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void)changeView:(NSUInteger)viewNumber;
+{
+    if(viewNumber == 1)
+    {
+    }
 }
 
 @end
