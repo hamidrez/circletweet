@@ -8,6 +8,7 @@
 
 #import "BBViewController.h"
 #import "BBCell.h"
+#import "ChatClientViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 //Keys used in the plist file to read the data for the table
@@ -91,6 +92,7 @@
 {
     static NSString *test = @"table";
     BBCell *cell = (BBCell*)[tableView dequeueReusableCellWithIdentifier:test];
+    cell.delegate = (id)self;
     if( !cell )
     {
         cell = [[BBCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:test];
@@ -102,6 +104,12 @@
     return cell;
 }
 
+- (void) openChat:(NSString *)userID
+{
+    ChatClientViewController *obj =[[ChatClientViewController alloc]initWithNibName:@"ChatClientViewController" bundle:nil];
+    obj.UserID = userID;
+    [self.navigationController pushViewController:obj animated:YES];
+}
 
 
 //read the data from the plist and alos the image will be masked to form a circular shape

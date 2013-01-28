@@ -23,11 +23,18 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+@protocol BBViewController <NSObject>
+-(void)openChat:(NSString *)userID;
+@end
+
 @interface BBCell : UITableViewCell
 {
     UILabel *mCellTtleLabel;
     CALayer *mImageLayer;
 }
+
+@property (nonatomic,strong) id <BBViewController> delegate;
+
 
 -(void)setCellTitle:(NSString*)title;
 -(void)setIcon:(UIImage*)image;

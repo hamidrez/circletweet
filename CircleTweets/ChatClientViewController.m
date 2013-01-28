@@ -7,6 +7,8 @@
 //
 
 #import "ChatClientViewController.h"
+#import "CMNavBarNotificationView.h"
+
 
 @implementation ChatClientViewController
 
@@ -19,6 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(tapReceivedNotificationHandler:)
+                                                 name:kCMNavBarNotificationViewTapReceivedNotification
+                                               object:nil];
 		
 	[self initNetworkCommunication];
 	
@@ -51,7 +58,7 @@
 - (IBAction) joinChat {
 
 	[self.view bringSubviewToFront:chatView];
-	NSString *response  = [NSString stringWithFormat:@"iam:%@", @"Hamid"];
+	NSString *response  = [NSString stringWithFormat:@"iam:%@", self.userID];
 	NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSASCIIStringEncoding]];
 	[outputStream write:[data bytes] maxLength:[data length]];
 	
@@ -122,6 +129,11 @@
 }
 
 - (void) messageReceived:(NSString *)message {
+    
+    [CMNavBarNotificationView notifyWithText:@"Moped Dog:"
+                                      detail:message
+                                       image:[UIImage imageNamed:@"mopedDog.jpeg"]
+                                 andDuration:5.0];
 	
 	[self.messages addObject:message];
 	[self.tView reloadData];

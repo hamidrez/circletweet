@@ -22,6 +22,7 @@
 	
 }
 
+@property (nonatomic, retain) NSString 	*userID;
 
 @property (nonatomic, retain) IBOutlet UIView *joinView;
 @property (nonatomic, retain) IBOutlet UIView *chatView;

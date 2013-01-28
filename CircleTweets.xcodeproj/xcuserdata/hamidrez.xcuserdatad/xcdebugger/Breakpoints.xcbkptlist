@@ -16,6 +16,71 @@
          landmarkName = "-application:didFinishLaunchingWithOptions:"
          landmarkType = "5">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CircleTweets/BBCell.m"
+         timestampString = "380930824.404613"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
+         landmarkName = "-setSelected:animated:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CircleTweets/BBCell.m"
+         timestampString = "380930824.404613"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "69"
+         endingLineNumber = "69"
+         landmarkName = "-setSelected:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CircleTweets/BBCell.m"
+         timestampString = "380930824.404613"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
+         landmarkName = "-setSelected:animated:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CircleTweets/BBViewController.m"
+         timestampString = "380931293.727429"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "109"
+         endingLineNumber = "109"
+         landmarkName = "-openChat:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "CircleTweets/ChatClientViewController.m"
+         timestampString = "381051130.124892"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "133"
+         endingLineNumber = "133"
+         landmarkName = "-messageReceived:"
+         landmarkType = "5">
+      </FileBreakpoint>
    </FileBreakpoints>
    <ExceptionBreakpoints>
       <ExceptionBreakpoint

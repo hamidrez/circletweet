@@ -73,6 +73,9 @@
 		E8A4D45E16B46AEE0045D87B /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A4D44D16B46AEE0045D87B /* data.plist */; };
 		E8A4D46116B475C10045D87B /* ChatMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A4D46016B475C00045D87B /* ChatMain.m */; };
 		E8A4D46316B475F80045D87B /* ChatMain.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8A4D46216B475F70045D87B /* ChatMain.xib */; };
+		E8B5EDC216B65E1100062F75 /* CMNavBarNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B5EDC116B65E1100062F75 /* CMNavBarNotificationView.m */; };
+		E8B5EDC616B65E2A00062F75 /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B5EDC516B65E2A00062F75 /* OBGradientView.m */; };
+		E8B5EDC816B65F0000062F75 /* mopedDog.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E8B5EDC716B65F0000062F75 /* mopedDog.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,6 +178,11 @@
 		E8A4D45F16B475C00045D87B /* ChatMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMain.h; sourceTree = "<group>"; };
 		E8A4D46016B475C00045D87B /* ChatMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMain.m; sourceTree = "<group>"; };
 		E8A4D46216B475F70045D87B /* ChatMain.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatMain.xib; sourceTree = "<group>"; };
+		E8B5EDC016B65E1100062F75 /* CMNavBarNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMNavBarNotificationView.h; sourceTree = "<group>"; };
+		E8B5EDC116B65E1100062F75 /* CMNavBarNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMNavBarNotificationView.m; sourceTree = "<group>"; };
+		E8B5EDC416B65E2A00062F75 /* OBGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBGradientView.h; sourceTree = "<group>"; };
+		E8B5EDC516B65E2A00062F75 /* OBGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBGradientView.m; sourceTree = "<group>"; };
+		E8B5EDC716B65F0000062F75 /* mopedDog.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mopedDog.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +264,7 @@
 		E8545A6F16B0F18A00AC5EA5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E8B5EDC716B65F0000062F75 /* mopedDog.jpeg */,
 				E8545A7916B0F32300AC5EA5 /* Launch */,
 				E8545A7816B0F2F900AC5EA5 /* Icons */,
 			);
@@ -313,6 +322,8 @@
 		E8A4D39316B0FCD80045D87B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8B5EDC316B65E1E00062F75 /* OBGradientView */,
+				E8B5EDBE16B65DFC00062F75 /* NotificationView */,
 				E8A4D42616B469F80045D87B /* BBTableView */,
 				E8A4D3E416B101AA0045D87B /* MBProgressHUD */,
 				E8A4D3AB16B1002F0045D87B /* RefreshController */,
@@ -517,6 +528,24 @@
 			path = Plist;
 			sourceTree = "<group>";
 		};
+		E8B5EDBE16B65DFC00062F75 /* NotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				E8B5EDC016B65E1100062F75 /* CMNavBarNotificationView.h */,
+				E8B5EDC116B65E1100062F75 /* CMNavBarNotificationView.m */,
+			);
+			name = NotificationView;
+			sourceTree = "<group>";
+		};
+		E8B5EDC316B65E1E00062F75 /* OBGradientView */ = {
+			isa = PBXGroup;
+			children = (
+				E8B5EDC416B65E2A00062F75 /* OBGradientView.h */,
+				E8B5EDC516B65E2A00062F75 /* OBGradientView.m */,
+			);
+			name = OBGradientView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -599,6 +628,7 @@
 				E8A4D45D16B46AEE0045D87B /* 9.png in Resources */,
 				E8A4D45E16B46AEE0045D87B /* data.plist in Resources */,
 				E8A4D46316B475F80045D87B /* ChatMain.xib in Resources */,
+				E8B5EDC816B65F0000062F75 /* mopedDog.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +666,8 @@
 				E8A4D43116B46A4F0045D87B /* BBTableViewInterceptor.m in Sources */,
 				E8A4D43516B46A8D0045D87B /* BBViewController.m in Sources */,
 				E8A4D46116B475C10045D87B /* ChatMain.m in Sources */,
+				E8B5EDC216B65E1100062F75 /* CMNavBarNotificationView.m in Sources */,
+				E8B5EDC616B65E2A00062F75 /* OBGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,6 +30,7 @@
     NSMutableArray *mDataSource;
 }
 
+- (void) openChat:(NSString *)userID;
 //- (IBAction)enableInfiniteScrolling:(id)sender;
 //- (IBAction)switchDirections:(id)sender;
 

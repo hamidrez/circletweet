@@ -73,6 +73,11 @@
 -(void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
+    if(selected)
+    {
+        [self.delegate openChat:mCellTtleLabel.text];
+
+    }
     mImageLayer.borderColor = selected ? [UIColor orangeColor].CGColor : [UIColor whiteColor].CGColor;
     mCellTtleLabel.textColor = selected ? [UIColor orangeColor] : [UIColor whiteColor];
 }
