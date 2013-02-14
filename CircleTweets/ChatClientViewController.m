@@ -41,7 +41,7 @@
 	
 	CFReadStreamRef readStream;
 	CFWriteStreamRef writeStream;
-	CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"192.168.1.68", 96, &readStream, &writeStream);
+	CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"ec2-54-234-118-253.compute-1.amazonaws.com", 96, &readStream, &writeStream);
 	
 	inputStream = (NSInputStream *)readStream;
 	outputStream = (NSOutputStream *)writeStream;
